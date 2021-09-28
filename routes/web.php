@@ -1,7 +1,6 @@
 <?php
 
-use App\Mail\SendMail;
-use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/send-email', function () {
-    Mail::to('derrickmbugua50@gmail.com')->send(new SendMail());
-    return "Email sent successfully";
-});
+Route::get('/send-email',[EmailController::class, "index"]);
