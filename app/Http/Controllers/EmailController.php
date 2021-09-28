@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\SendMail;
+
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
